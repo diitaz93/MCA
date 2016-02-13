@@ -1,0 +1,4 @@
+objetivo.txt : requisito.txt
+	     touch objetivo.txt
+	     
+	     

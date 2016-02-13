@@ -1,0 +1,2 @@
+hola.x : hola.c
+       gcc hola.c -o hola.x
