@@ -7,7 +7,7 @@
 #define INITIAL 0.5
 #define ERROR 0.001
 double derivative (double t, double y);
-double pow(double x, double y);
+/*double pow(double x, double y);*/
 int main()
 {
  /*Step*/
@@ -19,7 +19,7 @@ int main()
  /*Runge Kutta Coeficients*/
  double y1,y2,R,delta,k1,k2,k3,k4,k5,k6;
  /*Header*/
- printf("Time\tFunction");
+ printf("Time\tFunction\n");
  while (t<T_FINAL)
  {
   k1=h*derivative(t,y);
@@ -37,13 +37,14 @@ int main()
   {
    y=y1;
    t=t+h;
-   printf("%.4f\t%.4f",t,y);
+   printf("%.4f\t%.4f\n",t,y);
   }
   else
   {
    h=delta*h;
   }
  }
+ return 0;
 }
 
 /* Derivative returns the value of the derivative
