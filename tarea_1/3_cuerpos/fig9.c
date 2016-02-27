@@ -1,3 +1,5 @@
+/*Este código imprime 4 columnas de datos*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -11,7 +13,7 @@ int main ()
   srand48( seed );
   for (i=0;i<n;i++)
     {
-      printf("%.4f %.4f\n",drand48(),drand48());
+      printf("%.4f %.4f %.4f %.4f\n",drand48(),drand48(),drand48(),drand48());
     }
   return 0;
 }

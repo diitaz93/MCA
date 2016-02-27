@@ -13,5 +13,5 @@ int main ()
     {
       printf("%.4f %.4f\n",drand48(),drand48());
     }
-  return 1;
+  return 0;
 }

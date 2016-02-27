@@ -5,13 +5,13 @@
 int main ()
 {
   long seed;
-  int n=400;
+  int tg=800;
   int i;
-  seed=n;
+  seed=tg;
   srand48( seed );
-  for (i=0;i<n;i++)
+  for (i=0;i<tg;i++)
     {
-      printf("%.4f %.4f\n",drand48(),drand48());
+      printf("%.4f %.4f %.4f %.4f %.4f %.4f\n",(double)i*50.0/tg,(double)i,drand48(),drand48(),drand48(),drand48());
     }
-  return 1;
+  return 0;
 }
