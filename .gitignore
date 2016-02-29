@@ -1,3 +1,4 @@
 *.out
 *~
 *.x
+*.ipynb_checkpoints

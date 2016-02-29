@@ -130,26 +130,36 @@ void leap_frog (double h, double *q1, double *p1, double *q3, double *p3, double
   np1=*p1;
   np3=*p3;
 
+  /*Coordenadas 1*/
   //drift
   np1+=0.5*h*a1*der_p1(nq1,eps);
-  np3+=0.5*h*a1*der_p3(nq1,nq3,eps);
   //kick
   nq1+=a1*h*der_q1(np1);
-  nq3+=a1*h*der_q3(np3);
   //drift+drift
   np1+=0.5*h*der_p1(nq1,eps)*(a1+a0);
-  np3+=0.5*h*der_p3(nq1,nq3,eps)*(a1+a0);
   //kick
   nq1+=a0*h*der_q1(np1);
-  nq3+=a0*h*der_q3(np3);
   //drift+drift
   np1+=0.5*h*der_p1(nq1,eps)*(a0+a1);
-  np3+=0.5*h*der_p3(nq1,nq3,eps)*(a0+a1);
   //kick
   nq1+=a1*h*der_q1(np1);
-  nq3+=a1*h*der_q3(np3);
   //drift
   np1+=0.5*h*a1*der_p1(nq1,eps);
+
+  /*Coordenadas 3*/
+  //drift
+  np3+=0.5*h*a1*der_p3(nq1,nq3,eps);
+  //kick
+  nq3+=a1*h*der_q3(np3);
+  //drift+drift
+  np3+=0.5*h*der_p3(nq1,nq3,eps)*(a1+a0);
+  //kick
+  nq3+=a0*h*der_q3(np3);
+  //drift+drift
+  np3+=0.5*h*der_p3(nq1,nq3,eps)*(a0+a1);
+  //kick
+  nq3+=a1*h*der_q3(np3);
+  //drift
   np3+=0.5*h*a1*der_p3(nq1,nq3,eps);
 
   *q1=nq1;
