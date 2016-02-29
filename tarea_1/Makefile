@@ -1,4 +1,6 @@
 run:
-	cd Tarea1Ejemplo && $(MAKE) run
+	cd shocktube && $(MAKE) run
+	cd 3_cuerpos && $(MAKE) Figuras.pdf
 clean:
-	cd Tarea1Ejemplo && $(MAKE) clean
+	cd shocktube && $(MAKE) clean
+	cd 3_cuerpos && $(MAKE) Figuras.pdf
