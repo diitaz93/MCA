@@ -60,31 +60,15 @@ void Riemann(double *U1, double *U4, double *F)
     
     //5) flujos
    
-    double alpha = r_pro/(2.0*a_pro);
-    F[0] = rr*ur
-    +
-    lambda2*dv1
-    +
-    (0.5*r_pro/a_pro)*(lambda3*dv2
-    -
-    lambda1*dv3);
+    
+    F[0] = rr*ur+lambda2*dv1+(0.5*r_pro/a_pro)*(lambda3*dv2-lambda1*dv3);
     
     
-    F[1] = rr*(pow(ur,2)) +
-    pr
-    +
-    u_pro*lambda2*dv1
-    +
-    (0.5*r_pro/a_pro)*((u_pro+a_pro)*lambda3*dv2-(u_pro-a_pro)*lambda1*dv3);
+    F[1] = rr*(pow(ur,2)) +pr+u_pro*lambda2*dv1+(0.5*r_pro/a_pro)*((u_pro+a_pro)*lambda3*dv2-(u_pro-a_pro)*lambda1*dv3);
     
     
     
-    F[2] = rr*hr*ur
-    +
-    (pow(u_pro,2))*lambda2*dv1*0.5
-    +
-    (0.5*r_pro/a_pro)*((h_pro + a_pro*u_pro)*lambda3*dv2 -
-           (h_pro - a_pro*u_pro)*lambda1*dv3);
+    F[2] = rr*hr*ur+(pow(u_pro,2))*lambda2*dv1*0.5+(0.5*r_pro/a_pro)*((h_pro + a_pro*u_pro)*lambda3*dv2 -(h_pro - a_pro*u_pro)*lambda1*dv3);
     
 
    
