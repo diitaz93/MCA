@@ -7,7 +7,7 @@ clean :
 	rm *.x *.dat
 
 ##### Variable datos 
-dats : fig9.dat fig10.dat fig11.dat fig12.dat fig13.dat fig14.dat fig15.dat fig16.dat fig17.dat
+dats : fig9.dat fig12.dat fig13.dat fig14.dat fig15.dat fig16.dat fig17.dat
 
 ##### Datos Figura 9
 9.x : fig9.c
@@ -17,15 +17,15 @@ fig9.dat : 9.x
 	./$< > $@ 
 
 ##### Datos Figura 10
-10.x : fig10.c
-	gcc $< -lm -o $@
-fig10.dat : 10.x
-	./$< > $@ 
+#10.x : fig10.c
+#	gcc $< -lm -o $@
+#fig10.dat : 10.x
+#	./$< > $@ 
 
 ##### Datos Figura 11
-11.x : fig11.c
-	gcc $< -lm -o $@
-fig11.dat : 11.x
+#11.x : fig11.c
+#	gcc $< -lm -o $@
+#fig11.dat : 11.x
 	./$< > $@
 
 ##### Datos Figura 12
