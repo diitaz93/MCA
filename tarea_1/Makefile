@@ -1,4 +1,4 @@
-run:
+compile:
 	cd shocktube && $(MAKE) run
 	cd 3_cuerpos && $(MAKE) Figuras.pdf
 clean:
