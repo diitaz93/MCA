@@ -11,7 +11,7 @@
 #Compilacion archivos en C
 
 a.out: shocktube.c steps.c riemann.c
-	gcc shocktube.c 
+	gcc shocktube.c -lm
 run: a.out *.txt *.png 
 	
 clean:
