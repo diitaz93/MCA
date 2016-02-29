@@ -38,7 +38,7 @@ int main ()
   q1_RK=q1_LF=0.35355;
   q3_RK=q3_LF=2*drand48()-1;
   p1_RK=p1_LF=0.0;
-  p3_RK=p3_LF=0.0;
+  p3_RK=p3_LF=2*drand48()-1;
   double t=0.0;
     
   int i;
@@ -64,7 +64,7 @@ double der_q1(double p1)
 
 double der_p1(double q1, double eps)
 {
-  return -2*q1/pow((4*pow(q1,2)+pow(eps,2)),1.5);
+  return -2*q1*pow((4*pow(q1,2)+pow(eps,2)),-1.5);
 }
 
 double der_q3(double p3)
@@ -74,7 +74,7 @@ double der_q3(double p3)
 
 double der_p3(double q1, double q3, double eps)
 {
-  return (q1-q3)/pow((pow((q1-q3),2)+pow(eps,2)/4),1.5) - (q1+q3)/pow((pow((q1+q3),2)+pow(eps,2)/4),1.5);
+  return (q1-q3)*pow((pow((q1-q3),2)+pow(eps,2)/4),-1.5) - (q1+q3)*pow((pow((q1+q3),2)+pow(eps,2)/4),-1.5);
 }
 
 void RK4(double h, double *q1, double *p1, double *q3, double *p3, double eps)
